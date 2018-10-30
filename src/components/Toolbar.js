@@ -15,7 +15,7 @@ const toolbar = (props) => {
         </h1>
       </div>
       <div  className="Navigation">
-        <h1 tabIndex="0">Navigation</h1>
+        <h1 tabIndex="0">KC Coffee</h1>
       </div>
   </nav>
   )

@@ -183,7 +183,7 @@ body {
 }
 
 .InfoContent h3,
-.InfoContent p {
+.InfoContent h1 {
   margin: 0;
 }
 
@@ -193,11 +193,11 @@ body {
     height: 45px;
   }
 
-  .Hamburger p {
+  .Hamburger h1 {
     margin: 11px 0px 0px 0px;
   }
 
-  .Navigation p {
+  .Navigation h1 {
     font-size: 25px;
     line-height: 45px;
   }
@@ -209,7 +209,7 @@ body {
   .InfoContent h3 {
     font-size: 0.7rem;
   }
-  .InfoContent p {
+  .InfoContent h1 {
     font-size: 0.7rem;
   }
 
@@ -217,7 +217,7 @@ body {
     .InfoContent h3 {
       font-size: 0.5rem;
     }
-    .InfoContent p {
+    .InfoContent h1 {
       font-size: 0.5rem;
     }
   }
