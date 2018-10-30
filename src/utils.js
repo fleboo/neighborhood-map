@@ -19,6 +19,7 @@ export function load_google_maps() {
   });
 }
 
+// Get venues from Foursquare
 export function load_places() {
   let city = 'Kansas City, MO';
     let query = 'Coffee';

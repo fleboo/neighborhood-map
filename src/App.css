@@ -83,14 +83,14 @@ body {
   background: #290e00;
 }
 
-.Hamburger p {
+.Hamburger h1 {
   margin: 16px 16px 8px 16px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
 }
 
-.Navigation p {
+.Navigation h1 {
   padding-right: 80px;
   text-align: center;
   line-height: 55px;
@@ -220,12 +220,6 @@ body {
     }
     .InfoContent p {
       font-size: 0.5rem;
-    }
-  }
-  @media (max-width: 395px) {
-    html {
-      height: 679px;
-      width: 395px;
     }
   }
 }
