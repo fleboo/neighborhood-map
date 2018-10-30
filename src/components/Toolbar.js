@@ -2,6 +2,9 @@ import React from 'react';
 
 import '../App.css';
 
+// Menu icon example from mad9scientist
+// https://gist.github.com/mad9scientist/3870841
+
 const toolbar = (props) => {
   return (
     <nav className="Toolbar">
