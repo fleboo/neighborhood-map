@@ -151,6 +151,11 @@ body {
   border-radius: 8px;
 }
 
+.Matching {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
 .VenueList {
   padding: 0;
   margin: 8px;
