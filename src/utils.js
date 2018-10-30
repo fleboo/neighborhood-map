@@ -23,4 +23,5 @@ export function load_places() {
   let city = 'Kansas City, MO';
     let query = 'Coffee';
     var apiURL = 'https://api.foursquare.com/v2/venues/search?client_id=B1J1MZDHB3RA0AYZCU0ZFATHOTSRHP1WQG2JJY4V01OFUZ0E&client_secret=IHXTS4GU2IPPZZINHQYU5PWLVXLLJ4THOXQIHV5Z2I2N5AP5&v=20130815%20&limit=30&near=' + city + '&query=' + query + '';
-    return fetch(apiURL).then(resp => resp.json())
+    return fetch(apiURL).then(resp => resp.json());
+}
