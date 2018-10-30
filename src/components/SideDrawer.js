@@ -8,13 +8,13 @@ const sideDrawer = (props) => {
   return (
     <div className={sideDrawerClass}>
       <div className="CloseIconWrapper">
-        <div tabindex="0" className="CloseIcon" aria-label="Close">
+        <div tabIndex="0" className="CloseIcon" aria-label="Close">
           <span onClick={props.closeIconClick} type="button" aria-hidden="true">&times;</span>
         </div> 
       </div>
       <div className="SearchInputWrapper">
         <input 
-          tabindex="0"
+          tabIndex="0"
           type="text" 
           placeholder="Filter Coffee Shops"
           onChange={(event) => {props.changed(event.target.value)}} />

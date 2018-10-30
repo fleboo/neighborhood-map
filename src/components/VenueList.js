@@ -5,7 +5,7 @@ import ListItem from './ListItem';
 
 const venueList = (props) => {
   return (
-    <ol tabindex="0" className="VenueList">
+    <ol tabIndex="0" className="VenueList">
       {props.venues && 
         props.venues.map( (venue, index) => ( 
           <ListItem key={index} venue={venue} clicked={() => { props.listItemClick(venue) }} /> 
