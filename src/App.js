@@ -126,7 +126,6 @@ class App extends Component {
   render() {
     return (
       <Layout 
-        {...this.state.query}
         venues={this.state.filteredVenues} 
         listItemClick={this.listItemClickHandler} 
         searchFilter={this.searchFilterHandler}
