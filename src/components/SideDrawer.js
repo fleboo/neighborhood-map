@@ -19,7 +19,7 @@ const sideDrawer = (props) => {
           placeholder="Filter Coffee Shops"
           onChange={(event) => {props.changed(event.target.value)}} />
       </div>
-      <VenueList venues={props.venues} listItemClick={props.listItemClick} />
+      <VenueList error={props.error} venues={props.venues} listItemClick={props.listItemClick} />
     </div>
   );
 }

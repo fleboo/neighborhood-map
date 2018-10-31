@@ -47,6 +47,13 @@ padding: 0
   height: 100%;
 }
 
+.ContentError {
+  text-align: center;
+  padding: 40% 4px 4px 4px;
+  margin: 0;
+  
+}
+
 body {
   overflow: hidden;
 }

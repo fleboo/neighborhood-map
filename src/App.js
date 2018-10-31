@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { load_google_maps, load_places } from './utils';
 import Layout from './hoc/Layout/Layout';
+import ContentError from './components/ContentError';
 import './App.css';
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
       this.map = new google.maps.Map(document.getElementById('map') ,{
         center: {lat: this.venues[0].location.lat, lng: this.venues[0].location.lng,},
         zoom: 13
-      });
+      })
 
       this.venues.forEach(venue => {
         let marker = new google.maps.Marker({
@@ -74,7 +75,14 @@ class App extends Component {
 
       this.setState({ filteredVenues: this.venues })
 
-    }).catch((error) => console.log(error))
+    }).catch((error) => {this.errorHandler(error)})
+  }
+
+  // Function to handler API request errors
+  errorHandler = (error) => {
+    console.log("INSIDE of errorHandler function");
+    console.log(error);
+    this.setState({ error });
   }
 
   // Function to toggle sidebar on/off
@@ -127,11 +135,12 @@ class App extends Component {
     return (
       <Layout 
         venues={this.state.filteredVenues} 
+        error={this.state.error}
         listItemClick={this.listItemClickHandler} 
         searchFilter={this.searchFilterHandler}
         hamburgerClick={this.sideDrawerClickHandler}
         sideDrawerOpen={this.state.sideDrawerVisible} >
-        <div id="map"></div>
+        {<div id="map"></div>}
       </Layout>
     );
   }
