@@ -13,10 +13,10 @@ This is the final project for Udacity’s Front-End Nanodegree program. The goal
 * Search for a coffee shop or navigate through the list of all available restaurants
 
 ## Service Worker
-Note: The service worker will cache the application in production mode only. Hence, you must run the application in production to utilize the offline functionality. To run the application in production, follow these instructions.
+**Note:** The service worker will cache the application in production mode only. Hence, you must run the application in production to utilize the offline functionality. To run the application in production, follow these instructions.
 
 * Create a production build with
-```npm run build``
+```npm run build```
 * Next, run the following command or point your webserver to the build directory 
 ```npm install -g serve```
 * In the build directory, run the following command to host the app at http://localhost:5000
