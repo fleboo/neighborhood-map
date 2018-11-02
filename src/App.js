@@ -32,13 +32,17 @@ class App extends Component {
       this.venues = results[1].response.venues;
 
       this.markers = [];
+
+      // Create info window
       this.infowindow = new google.maps.InfoWindow();
 
+      // Render map
       this.map = new google.maps.Map(document.getElementById('map') ,{
         center: {lat: this.venues[0].location.lat, lng: this.venues[0].location.lng,},
         zoom: 13
       })
 
+      // Create a maker for each venue
       this.venues.forEach(venue => {
         let marker = new google.maps.Marker({
           map: this.map,
@@ -50,6 +54,7 @@ class App extends Component {
           animation: google.maps.Animation.DROP
         });
 
+        // Generate content for each marker
         let address = marker.address ? marker.address : 'No address listed';
         let contentString = '<div class="InfoContent"><h3>' + marker.name + '</h3><p>' + address + '</p></div>';
 
@@ -73,6 +78,7 @@ class App extends Component {
         this.markers.push(marker);
       });
 
+      // Update venues in state
       this.setState({ filteredVenues: this.venues })
 
     }).catch((error) => {this.errorHandler(error)})
@@ -140,7 +146,7 @@ class App extends Component {
         searchFilter={this.searchFilterHandler}
         hamburgerClick={this.sideDrawerClickHandler}
         sideDrawerOpen={this.state.sideDrawerVisible} >
-        {<div id="map"></div>}
+        {this.state.error ? <ContentError /> : <div id="map"></div>}
       </Layout>
     );
   }

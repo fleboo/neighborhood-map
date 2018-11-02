@@ -45,13 +45,22 @@ padding: 0
 
 #map {
   height: 100%;
+  position: relative;
 }
 
 .ContentError {
   text-align: center;
-  padding: 40% 4px 4px 4px;
+  font-size: .8rem;
+  /* color: #fff; */
+  padding: 10% 4px 4px 4px;
   margin: 0;
   
+}
+
+.ContentErrorWrap {
+  background: #cfcaca;
+  text-align: center;
+  margin: 0;
 }
 
 body {
@@ -62,6 +71,7 @@ body {
   margin: 0;
   height: 58px;
   width: 100%;
+  /* min-width: 380px; */
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
@@ -160,7 +170,9 @@ body {
 
 .Matching {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 1px;
+  padding-top: 0;
 }
 
 .VenueList {
@@ -231,6 +243,10 @@ body {
     }
     .InfoContent h1 {
       font-size: 0.5rem;
+    }
+    .ContentError {
+      font-size: 0.15rem;
+      padding: 0;
     }
   }
 }
