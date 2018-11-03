@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { load_google_maps, load_places } from './utils';
 import Layout from './hoc/Layout/Layout';
-import ContentError from './components/ContentError';
 import './App.css';
 
 class App extends Component {
@@ -84,16 +83,14 @@ class App extends Component {
     }).catch((error) => {this.errorHandler(error)})
   }
 
-  // Function to handler API request errors
+  // Function to handle API request errors
   errorHandler = (error) => {
-    console.log("INSIDE of errorHandler function");
-    console.log(error);
+    alert("Oops! There was a problem loading content. Please refresh the page or try again later.");
     this.setState({ error });
   }
 
   // Function to toggle sidebar on/off
   sideDrawerClickHandler = () => {
-    console.log('Hamburger Clicked!');
     this.setState({sideDrawerVisible: !this.state.sideDrawerVisible})
   }
 
@@ -141,12 +138,11 @@ class App extends Component {
     return (
       <Layout 
         venues={this.state.filteredVenues} 
-        error={this.state.error}
         listItemClick={this.listItemClickHandler} 
         searchFilter={this.searchFilterHandler}
         hamburgerClick={this.sideDrawerClickHandler}
         sideDrawerOpen={this.state.sideDrawerVisible} >
-        {this.state.error ? <ContentError /> : <div id="map"></div>}
+        {<div id="map"></div>}
       </Layout>
     );
   }

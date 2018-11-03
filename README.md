@@ -4,7 +4,7 @@ This is the final project for Udacity’s Front-End Nanodegree program. The goal
 ## Instructions
 * Clone the application 
 ```$ git clone https://github.com/fleboo/neighborhood-map.git```
-* Navigation to the project directory 
+* Navigate to the project directory 
 ```$ cd neighborhood-map```
 * Install dependencies 
 ```$ npm install```
