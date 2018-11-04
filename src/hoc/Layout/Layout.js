@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Aux from '../Aux/Aux';
 import SideDrawer from '../../components/SideDrawer';
 import Toolbar from '../../components/Toolbar';
 import '../../App.css';
@@ -9,7 +8,7 @@ class Layout extends Component {
   
   render () {
     return (
-      <Aux>
+      <React.Fragment>
         <div className="App" >
           <Toolbar hamburgerClick={this.props.hamburgerClick} />
           <div className="main">
@@ -25,8 +24,8 @@ class Layout extends Component {
             </div>
           </div>
         </div>
-      </Aux>
-    );
+      </React.Fragment>
+    )
   }
 }
 
