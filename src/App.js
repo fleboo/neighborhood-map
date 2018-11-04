@@ -81,6 +81,12 @@ class App extends Component {
       this.setState({ filteredVenues: this.venues })
 
     }).catch((error) => {this.errorHandler(error)})
+  
+    // Alert user of errors while retrieving Google Maps
+    window.gm_authFailure = () => {
+      console.log('There was an error loading the map');
+      setTimeout(() => { alert('There was a problem loading the map.'); }, 500);
+    }
   }
 
   // Function to handle API request errors
@@ -136,14 +142,14 @@ class App extends Component {
 
   render() {
     return (
-      <Layout 
-        venues={this.state.filteredVenues} 
-        listItemClick={this.listItemClickHandler} 
-        searchFilter={this.searchFilterHandler}
-        hamburgerClick={this.sideDrawerClickHandler}
-        sideDrawerOpen={this.state.sideDrawerVisible} >
-        {<div id="map"></div>}
-      </Layout>
+        <Layout 
+          venues={this.state.filteredVenues} 
+          listItemClick={this.listItemClickHandler} 
+          searchFilter={this.searchFilterHandler}
+          hamburgerClick={this.sideDrawerClickHandler}
+          sideDrawerOpen={this.state.sideDrawerVisible} >
+          {<div id="map"></div>}
+        </Layout>
     );
   }
 }

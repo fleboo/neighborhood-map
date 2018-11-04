@@ -15,9 +15,7 @@ export function load_google_maps() {
     const API_KEY = 'AIzaSyBuAooSCGcykt1snpWUEndQeXUkeIdV2rU';
     script.src = `https://maps.googleapis.com/maps/api/js?libraries=places&key=${API_KEY}&callback=resolveGoogleMapsPromise`;
     script.async = true;
-    script.onerror = function() {
-      alert("There was a problem loading the map");
-    }
+    script.defer = true;
     document.body.appendChild(script);
   });
 }
