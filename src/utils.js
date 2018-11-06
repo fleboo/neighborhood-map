@@ -17,6 +17,10 @@ export function load_google_maps() {
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
+    // Alert the user of errors while loading Google Maps
+    script.onerror = function () {
+      alert('There was a problem loading the map. Please refresh the page or try again later')
+    }
   });
 }
 

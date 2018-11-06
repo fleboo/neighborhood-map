@@ -82,10 +82,10 @@ class App extends Component {
 
     }).catch((error) => {this.errorHandler(error)})
   
-    // Alert user of errors while retrieving Google Maps
+    // Alert user of authentication errors while retrieving Google Maps
     window.gm_authFailure = () => {
-      console.log('There was an error loading the map');
-      setTimeout(() => { alert('There was a problem loading the map.'); }, 500);
+      console.log('ERROR: Check Google Maps credentials');
+      setTimeout(() => { alert('There was a problem loading the map. Check your Google Maps credentials and try again'); }, 500);
     }
   }
 
